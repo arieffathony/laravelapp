@@ -13,7 +13,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('title','desc')->get();
+        $posts = Post::orderBy('title','asc')->paginate(10);
         return view('posts.index')->with('posts',$posts);
     }
 
