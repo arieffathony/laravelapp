@@ -12,5 +12,6 @@
             {{Form::textarea('body','',['id'=>'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Masukkan Isi Postingan disini'])}}
         </div>
         {{Form::submit('Submit',['class' => 'btn btn-primary'])}}
+        <a href="/posts" class="btn btn-default">Cancel</a>
     {!! Form::close() !!}
 @endsection
