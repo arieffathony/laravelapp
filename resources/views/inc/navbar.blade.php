@@ -35,7 +35,7 @@
                       <li><a href="/posts">Blog</a></li>
                       <li><a href="https://github.com/arieffathony">My Github</a></li>
                     @else
-                      <li><a href="/dashboard">Home</a></li>               
+                      <li><a href="/dashboard">Dashboard</a></li>               
                       <li><a href="/about">About Us</a></li>
                       <li><a href="/services">Our Services</a></li>
                       <li><a href="/posts">Blog</a></li>
@@ -56,8 +56,8 @@
                                   <li>
                                       <a href="{{ route('logout') }}"
                                           onclick="event.preventDefault();
-                                                   document.getElementById('logout-form').submit();">
-                                          Logout
+                                                   document.getElementById('logout-form').submit();"><span class="glyphicon glyphicon-off"></span>
+                                            Logout
                                       </a>
 
                                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
