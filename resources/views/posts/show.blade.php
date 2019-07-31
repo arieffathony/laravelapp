@@ -9,5 +9,9 @@
     <hr>
     <small>Written On : {{$post->created_at}}</small>
     <hr>
-    <a href="/posts/{{$post->id}}/edit" class="btn btn-warning">Edit</a>
+    {!!Form::open(['action' => ['PostsController@destroy',$post->id], 'method' => 'POST', 'class' => 'pull-left'])!!}
+        {{Form::hidden('_method', 'DELETE')}}
+        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+    {!!Form::close()!!}
+    <a href="/posts/{{$post->id}}/edit" class="btn btn-warning" style="margin-left: 10px">Edit</a>
 @endsection
