@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="/posts/create" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>  Create Post</a>
+                    <a href="/posts/create" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>&nbsp Create Post</a>
                     <h3>Your Blog Post </h3>
                     @if (count($posts) > 0)
                     <table class="table table-hover">
@@ -26,9 +26,9 @@
                             <th><a href="/posts/{{$post->id}}">{{$post->title}}</a></th>
                             <th>{!!Form::open(['action' => ['PostsController@destroy',$post->id], 'method' => 'POST', 'class' => 'pull-left'])!!}
                                     {{Form::hidden('_method', 'DELETE')}}
-                                    {{Form::button('<i class="glyphicon glyphicon-remove"></i>  Delete', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
+                                    {{Form::button('<i class="glyphicon glyphicon-remove"></i>&nbsp Delete', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
                                 {!!Form::close()!!}
-                                <a href="/posts/{{$post->id}}/edit" class="btn btn-warning" style="margin-left: 10px"><span class="glyphicon glyphicon-wrench"></span>  Edit</a></th>
+                                <a href="/posts/{{$post->id}}/edit" class="btn btn-warning" style="margin-left: 10px"><span class="glyphicon glyphicon-wrench"></span>&nbsp Edit</a></th>
                         </tr>
                         @endforeach
                     </table>

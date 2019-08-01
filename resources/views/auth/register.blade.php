@@ -66,6 +66,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     Register
                                 </button>
+                                <a href="/" class="btn btn-default">Cancel</a>
                             </div>
                         </div>
                     </form>
